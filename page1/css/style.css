@@ -1,0 +1,55 @@
+/* Font */
+
+/* 
+.cedarville-cursive-regular {
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+} */
+
+* {
+    font-family: "Cedarville Cursive", cursive;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 50px;
+}
+
+
+body {
+    background-color: #f0f0f0; /* 배경색 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 텍스트 컨테이너 */
+.text-container {
+    overflow: hidden; /* 글자가 써지는 효과를 위해 overflow hidden */
+    border-right: 3px solid black; /* 타이핑 커서 효과 */
+    white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite; /* 타이핑 애니메이션과 커서 깜빡임 애니메이션 */
+}
+
+/* 글자가 써지는 효과 애니메이션 */
+@keyframes typing {
+    from {
+        width: 0; /* 시작할 때 너비를 0으로 설정 */
+    }
+    to {
+        width: 100%; /* 너비를 100%로 설정하여 모든 글자를 표시 */
+    }
+}
+
+/* 타이핑 커서 깜빡이는 효과 애니메이션 */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent; /* 시작과 끝에서 투명하게 설정 */
+    }
+    50% {
+        border-color: black; /* 중간에서 검은색으로 설정하여 깜빡임 효과 */
+    }
+}
