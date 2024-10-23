@@ -1,0 +1,69 @@
+body {
+    background: linear-gradient(to bottom, #FDE47F, #B3E5FC, #FF8A80);
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover; 
+    display: block;
+    animation: wave 5s ease-in-out infinite; 
+    font-family: "Permanent Marker", cursive;
+}
+
+.container {
+    text-align: center;
+}
+
+.you {
+    color: white;
+    display: inline-flex;
+    font-size: 400px;
+    transition: transform 0.3s ease;
+    margin: 10px 20px;
+}
+
+.you:hover {
+    transform: scale(1.5);
+}
+
+.mm {
+    font-size: 50px;
+    color: white;
+    margin-top: 0;
+    margin-right: -40%;
+    font-size: 100px;
+    text-decoration: none;
+}
+
+.mm:hover {
+    color: orangered;
+    transform: rotate(180deg);
+}
+
+.nn {
+    color: white;
+    display: inline-block;
+    animation: move 2s linear infinite; 
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%; 
+    }
+    100% {
+        background-position: 0% 0%; 
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0); 
+    }
+    50% {
+        transform: translateX(50px); 
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}

@@ -1,55 +1,136 @@
-/* Font */
-
-/* 
-.cedarville-cursive-regular {
-    font-family: "Cedarville Cursive", cursive;
-    font-weight: 400;
-    font-style: normal;
-} */
 
 * {
     font-family: "Cedarville Cursive", cursive;
-    font-optical-sizing: auto;
     font-weight: normal;
-    font-style: normal;
     font-size: 50px;
 }
 
-
 body {
-    background-color: #f0f0f0; /* 배경색 설정 */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    
+    background-image: url('../img/paper.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh;
+    margin: 0; 
 }
 
-/* 텍스트 컨테이너 */
 .text-container {
-    overflow: hidden; /* 글자가 써지는 효과를 위해 overflow hidden */
-    border-right: 3px solid black; /* 타이핑 커서 효과 */
-    white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
-    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite; /* 타이핑 애니메이션과 커서 깜빡임 애니메이션 */
+    text-align: center;
 }
 
-/* 글자가 써지는 효과 애니메이션 */
+.beautiful,
+.tragic {
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+}
+
+
+.so-hover{   
+    color: rgb(117, 105, 13);
+}
+
+
+.so-hover:hover{   
+    color: rgb(86, 105, 207);
+}
+
+.so-hover2{   
+    color: rgb(85, 195, 162);
+}
+
+
+.so-hover2:hover{   
+    color: rgb(194, 70, 9);
+}
+
+.beautiful {
+    color: #a229cb;
+}
+
+.tragic {
+    color: #721907;
+}
+
+.magic {
+    color: rgb(70, 105, 203); /* 링크 색상 설정 (원하는 색으로 변경 가능) */
+    text-decoration: underline; /* 밑줄 추가 */
+    cursor: pointer; /* 마우스 커서 변경 */
+    transition: color 0.3s ease; /* 색상 변화 애니메이션 */
+    text-decoration: none;
+}
+
+.magic:hover {
+    color: rgb(238, 179, 43); /* hover 시 색상 변경 (원하는 색으로 변경 가능) */
+}
+
+
+.so-hover:hover + .beautiful {
+    opacity: 1; 
+}
+
+.so-hover2:hover + .tragic {
+    opacity: 1; 
+}
+
+
+.typing-effect {
+    overflow: hidden; 
+    white-space: nowrap; 
+    border-right: 3px solid transparent; 
+    animation: typing 3.5s steps(15, end), blink-caret 0.75s step-end infinite; 
+}
+
+
 @keyframes typing {
     from {
-        width: 0; /* 시작할 때 너비를 0으로 설정 */
+        width: 0; 
     }
     to {
-        width: 100%; /* 너비를 100%로 설정하여 모든 글자를 표시 */
+        width: 100%; 
+}
+}
+
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent; 
+    }
+    50% {
+        border-color: black; 
     }
 }
 
-/* 타이핑 커서 깜빡이는 효과 애니메이션 */
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent; /* 시작과 끝에서 투명하게 설정 */
-    }
-    50% {
-        border-color: black; /* 중간에서 검은색으로 설정하여 깜빡임 효과 */
-    }
+
+.cursor {
+    display: inline; 
+    margin-left: 5px; }
+
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease; 
+    display: block; 
+}
+
+
+.fade-in-sentence {
+    opacity: 0; 
+    transition: opacity 1s ease; 
+}
+
+
+#third-sentence.fade-in .fade-in-sentence {
+    opacity: 1; 
 }

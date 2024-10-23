@@ -20,9 +20,38 @@
 
     <body>
         <div class="text-container">
-            <div class="typing-effect">We were so beautiful</div>
+            <div class="typing-effect" id="first-sentence">
+                We were <span class="so-hover"> so</span><span class="beautiful"> beautiful</span>
+                <span class="cursor"></span>
+            </div>
+            <div class="typing-effect" id="second-sentence" style="display: none;">
+                We were <span class="so-hover2"> so</span><span class="tragic"> tragic</span>
+                <span class="cursor"></span>
+            </div>
+            <div class="typing-effect" id="third-sentence" style="display: none;">
+                <span class="fade-in-sentence">No other <a href="../page2/page2.html" class="magic">magic</a> could ever compare</span>
+            </div>
         </div>
+    
+        <script>
+            setTimeout(() => {
+                document.getElementById('first-sentence').classList.add('fade-out');
+                setTimeout(() => {
+                    document.getElementById('first-sentence').style.display = 'none';
+                    document.getElementById('second-sentence').style.display = 'block';
+                    document.getElementById('second-sentence').classList.add('fade-in');
+                    
+                    setTimeout(() => {
+                        document.getElementById('second-sentence').classList.add('fade-out');
+                        setTimeout(() => {
+                            document.getElementById('second-sentence').style.display = 'none';
+                            document.getElementById('third-sentence').style.display = 'block';
+                            document.getElementById('third-sentence').classList.add('fade-in');
+                        }, 1500); 
+                    }, 3200); 
+                }, 1500); 
+            }, 4000); 
+        </script>
     </body>
-
 
 </html>

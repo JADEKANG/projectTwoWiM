@@ -1,0 +1,74 @@
+body {
+    background-image: radial-gradient(circle at center, 
+                                      #FF4500 20%,   
+                                      #FF6347 40%,   
+                                      #FFA500 60%,  
+                                      #FFD700 80%,  
+                                      #FDE47F 100%); 
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    text-align: center;
+    color: white;
+    
+}
+
+.fun {
+    font-family: "Permanent Marker", cursive;
+    font-size: 180px;
+
+}
+
+.fun:hover {
+    animation: text-flash 1s infinite;
+}
+
+.lbk {
+    font-family: "Cedarville Cursive", serif;
+    font-size: 50px;
+}
+
+#lkg {
+    transition-duration: 2s;
+    display: inline-block;
+}
+#lkg:hover {
+    transform: skew(90deg, 30deg);
+}
+
+#bk {
+    transition-duration: 3s;
+    display: inline-block;
+}
+#bk:hover {
+    transform: scale(2);
+}
+
+
+.home {
+    text-decoration: none;
+    font-family: "Caveat", serif;
+    margin-top: 90px;
+    color: white;
+}
+
+.home:hover {
+    color: black;
+}
+
+
+
+
+@keyframes text-flash {
+    0% {
+        color: black;
+    }
+    50% {
+        color: white;
+    }
+    100% {
+        color: black; 
+    }
+}
